@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@color/thistle"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="1dp"
+    card_view:cardUseCompatPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/tvEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textColor="@color/walnutBrown"
+            card_view:layout_constraintBottom_toTopOf="@+id/ivSpeakerEnglish"
+            card_view:layout_constraintEnd_toStartOf="@+id/ivEnglish"
+            card_view:layout_constraintStart_toEndOf="@+id/tvSpanish"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSpanish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textColor="@color/walnutBrown"
+            card_view:layout_constraintBottom_toTopOf="@+id/ivSpeakerSpanish"
+            card_view:layout_constraintEnd_toStartOf="@+id/tvEnglish"
+            card_view:layout_constraintStart_toEndOf="@+id/ivSpanish"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivSpanish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:srcCompat="@drawable/flage" />
+
+        <ImageView
+            android:id="@+id/ivEnglish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:srcCompat="@drawable/flagi" />
+
+        <ImageView
+            android:id="@+id/ivSpeakerSpanish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="sp"
+            card_view:layout_constraintEnd_toStartOf="@+id/ivSpeakerEnglish"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/ivSpanish"
+            card_view:srcCompat="@drawable/speaker" />
+
+        <ImageView
+            android:id="@+id/ivSpeakerEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="en"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/ivSpeakerSpanish"
+            card_view:layout_constraintTop_toBottomOf="@+id/ivEnglish"
+            card_view:srcCompat="@drawable/speaker" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
